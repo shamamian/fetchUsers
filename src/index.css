@@ -1,0 +1,129 @@
+@import url(https://fonts.googleapis.com/css?family=Montserrat:100,200,300,regular,500,600,700);
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+:root {
+    --dark-blue: #060047;
+    --dark-pink: #B3005E;
+}
+
+.app {
+    width: 100%;
+    background: var(--dark-blue);
+}
+
+.container {
+    width: 90%;
+    margin: 0 auto;
+    padding-bottom: 2rem;
+}
+
+.container__button {
+    height: 10rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container__button button {
+    font-size: 1.2rem;
+    color: white;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 700;
+    background-color: var(--dark-pink);
+    border: none;
+    padding: 1.5rem 4rem;
+    border-radius: 10px;
+    box-shadow: 0px 10px 5px #5f0033;
+    cursor: pointer;
+}
+
+.container__button button:active {
+    box-shadow: 0px 0px transparent;
+    margin-top: 10px;
+}
+
+.container__users-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+
+
+.flip-card {
+    width: 350px;
+    height: 450px;
+    text-align: center;
+    background: white;
+    border: 2px solid transparent;
+    border-radius: 10px;
+    padding: 1rem 2rem;
+    perspective: 1000px;
+    transition: .5s;
+}
+
+.flip-card:hover {
+    border-color: var(--dark-pink);
+    background-color: transparent;
+}
+
+.flip-card__inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+}
+
+.flip-card:hover .flip-card__inner {
+    transform: rotateY(180deg);
+}
+
+.flip-card__front,
+.flip-card__back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+}
+
+.flip-card__front .card__content {
+   margin-top: 2rem;
+}
+
+.flip-card__front .card__content h3 {
+    font-size: 25px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.flip-card__front .card__content small {
+    font-weight: 600;
+    font-size: 1rem;
+}
+
+.flip-card__back {
+    color: white;
+    transform: rotateY(180deg);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0.8rem;
+}
+
+.flip-card__back h4 {
+    font-size: 25px;
+    font-weight: 700;
+}
+
+
+
+
